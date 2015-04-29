@@ -9,7 +9,7 @@ var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 var Order = require('../api/order/order.model');
 Order.find({}).remove(function() {
-  Thing.create({
+  Order.create({
     cupcakeFlavor : 'Vanilla',
     date : Date.now,
 	author: 'nathan',

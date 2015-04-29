@@ -6,7 +6,7 @@ var mongoose = require('mongoose'),
 var OrderSchema = new Schema({
   cupcakeFlavor: String,
   date: { type: Date, default: Date.now },
-  author: String
+   Author: { type: Schema.Types.ObjectId, ref: 'User.name' }
 });
 
 module.exports = mongoose.model('Order', OrderSchema);

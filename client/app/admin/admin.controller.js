@@ -15,7 +15,6 @@ angular.module('cupcakeStoreApp')
         }
       });
     };
-  $scope.orders = [];
   $http.get('/server/api/orders').
   success(function(orders) {
 $scope.orders = orders;
