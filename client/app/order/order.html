@@ -4,11 +4,13 @@
   <form class="comment-form" ng-submit="addOrder()" name="orderForm">
     <textarea class="form-control" ng-model="order.dest" rows="3" placeholder="Enter your address" required></textarea>
 	<label>
-    <input type="radio" ng-model="order.cupcakeFlavor" value="Vanilla">
+    <input type="radio" ng-model="order.cupcakeFlavor" value="Vanilla" id = "vanillacc">
+	<label for="vannillacc"><img src="assets/images/vanillacc.png" alt="vanilla" style = "width : 50px; height : 50px" /></label>
     Vanilla
     </label><br/>
     <label>
-    <input type="radio" ng-model="order.cupcakeFlavor" value="Chololate">
+    <input type="radio" ng-model="order.cupcakeFlavor" value="Chololate" id = "chocolatecc">
+	<label for="Chololate"><img src="assets/images/chocolatecc.png" alt="chocolate" style = "width : 50px; height : 50px" /></label>
     Chololate
     </label><br/>
     <input class="btn btn-primary" type="submit" ng-disabled="orderForm.$invalid" value="Order">

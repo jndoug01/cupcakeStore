@@ -7,26 +7,40 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var Order = require('../api/order/order.model');
+Order.find({}).remove(function() {
+  Thing.create({
+    cupcakeFlavor : 'Vanilla',
+    date : Date.now,
+	author: 'nathan',
+	dest: '1234 wall st.'
+  }, {
+    cupcakeFlavor : 'Chocolate',
+    date : Date.now,
+	author: 'Becky',
+	dest: '1234 Spring st.'
+  });
+});
 
 Thing.find({}).remove(function() {
   Thing.create({
-    name : 'Development Tools',
-    info : 'Integration with popular tools such as Bower, Grunt, Karma, Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, Stylus, Sass, CoffeeScript, and Less.'
+    name : 'recipe1',
+    info : 'recipe1'
   }, {
-    name : 'Server and Client integration',
-    info : 'Built with a powerful and fun stack: MongoDB, Express, AngularJS, and Node.'
+    name : 'recipe2',
+    info : 'recipe2'
   }, {
-    name : 'Smart Build System',
-    info : 'Build system ignores `spec` files, allowing you to keep tests alongside code. Automatic injection of scripts and styles into your index.html'
+    name : 'recipe3',
+    info : 'recipe3'
   },  {
-    name : 'Modular Structure',
-    info : 'Best practice client and server structures allow for more code reusability and maximum scalability'
+    name : 'recipe4',
+    info : 'reicpe4'
   },  {
-    name : 'Optimized Build',
-    info : 'Build process packs up your templates as a single JavaScript payload, minifies your scripts/css/images, and rewrites asset names for caching.'
+    name : 'recipe5',
+    info : 'recipe5'
   },{
-    name : 'Deployment Ready',
-    info : 'Easily deploy your app to Heroku or Openshift with the heroku and openshift subgenerators'
+    name : 'recipe6',
+    info : 'recipe6'
   });
 });
 
