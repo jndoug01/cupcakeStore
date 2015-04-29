@@ -1,0 +1,16 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+ 
+<div class="container">
+  <form class="comment-form" ng-submit="addOrder()" name="orderForm">
+    <textarea class="form-control" ng-model="order.dest" rows="3" placeholder="Enter your address" required></textarea>
+	<label>
+    <input type="radio" ng-model="order.cupcakeFlavor" value="Vanilla">
+    Vanilla
+    </label><br/>
+    <label>
+    <input type="radio" ng-model="order.cupcakeFlavor" value="Chololate">
+    Chololate
+    </label><br/>
+    <input class="btn btn-primary" type="submit" ng-disabled="orderForm.$invalid" value="Order">
+  </form>
+</div>
