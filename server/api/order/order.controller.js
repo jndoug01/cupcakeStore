@@ -22,7 +22,7 @@ exports.show = function(req, res) {
 
 // Creates a new order in the DB.
 exports.create = function(req, res) {
-  var order = new Order(_.merge({ author: req.user._id }, req.body));
+  var order = new Order(_.merge({ author: req.user }, req.body));
   order.save(function(err, order) {
     if(err) { return handleError(res, err); }
     return res.json(201, order);
