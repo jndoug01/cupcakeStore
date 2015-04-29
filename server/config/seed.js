@@ -8,19 +8,7 @@
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 var Order = require('../api/order/order.model');
-Order.find({}).remove(function() {
-  Order.create({
-    cupcakeFlavor : 'Vanilla',
-    date : Date.now,
-	author: 'nathan',
-	dest: '1234 wall st.'
-  }, {
-    cupcakeFlavor : 'Chocolate',
-    date : Date.now,
-	author: 'Becky',
-	dest: '1234 Spring st.'
-  });
-});
+
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -41,6 +29,20 @@ Thing.find({}).remove(function() {
   },{
     name : 'recipe6',
     info : 'recipe6'
+  });
+});
+
+Order.find({}).remove(function() {
+  Order.create({
+    cupcakeFlavor : 'Vanilla',
+    date : '2012-04-23T18:25:43.511Z',
+	author: 'nathan',
+	dest: '1234 wall st.'
+  }, {
+    cupcakeFlavor : 'Chocolate',
+    date : '2012-04-23T18:25:43.511Z',
+	author: 'Becky',
+	dest: '1234 Spring st.'
   });
 });
 

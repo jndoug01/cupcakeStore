@@ -5,7 +5,7 @@ var Order = require('./order.model');
 
 // Get list of orders
 exports.index = function(req, res) {
-  Thing.find(function (err, things) {
+  Order.find(function (err, orders) {
     if(err) { return handleError(res, err); }
     return res.json(200, orders);
   });
@@ -20,12 +20,12 @@ exports.show = function(req, res) {
   });
 };
 
-// Creates a new comment in the DB.
+// Creates a new order in the DB.
 exports.create = function(req, res) {
   var order = new Order(_.merge({ author: req.user._id }, req.body));
-  comment.save(function(err, comment) {
+  order.save(function(err, order) {
     if(err) { return handleError(res, err); }
-    return res.json(201, comment);
+    return res.json(201, order);
   });
 };
 
