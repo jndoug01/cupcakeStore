@@ -14,7 +14,7 @@ angular.module('cupcakeStoreApp')
         return;
       }
       $http.post('/api/orders', { name: $scope.newOrder });
-      $scope.newThing = '';
+      $scope.newOrder = '';
     };
 
     $scope.deleteOrder = function(order) {
